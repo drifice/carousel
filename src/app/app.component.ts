@@ -13,6 +13,9 @@ export class AppComponent implements OnInit, OnDestroy {
   private carousel: ElementRef;
   private sub: Subscription;
   private sub2: Subscription;
+  
+  // quand je ne le mets pas, en démarrant le serveur cela fait une erreur quand tu fais l'appel à l'API
+  // en mettant ceci je passe par un proxi$y pour que cela fonctionne 
   private corsFix: string = "https://cors-anywhere.herokuapp.com/";
   private imageUrl: string = "http://62.210.247.201:9000/test";
 
