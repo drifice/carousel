@@ -1,0 +1,62 @@
+.title {
+    font-size: 6rem;
+    text-align: center;
+    font-family: cursive;
+    font-weight: 500;
+    span {
+        font-size: 1.5rem;
+        color: white;
+    }
+    margin: -8px;
+    background-color: #f6c311;
+    @media (max-width: 640px) {
+        & {
+            font-size: 2rem;
+        }
+    }
+}
+
+.container {
+    border-radius: 15px;
+    height: 10rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 70%;
+    background-color: white;
+    box-shadow: -2px 3px 19px floralwhite;
+    padding: 2rem 0;
+    overflow: hidden;
+
+    .carousel {
+        // affiche sur une ligne
+        display: flex;
+        height: 10rem;
+        overflow: hidden;
+        justify-content: flex-end;
+        .image {
+            height: 100%;
+            // noir et blanc
+            filter: grayscale(100%);
+            &:hover {
+                // lorsqu'on passe la souris, on désactive le noir et blanc
+                filter: none;
+                transform: scale(1.1);
+                transition: all 0.2s ease-in-out;
+            }
+            margin-left: 2rem;
+        }
+    }
+}
+
+.author {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    color: white;
+    font-size: 2rem;
+    font-family: cursive;
+}
